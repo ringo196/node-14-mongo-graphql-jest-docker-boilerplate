@@ -1,0 +1,63 @@
+{
+  "name": "covid-test-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/server.js",
+    "test": "jest --setupFiles dotenv/config"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "./dist"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "html"
+    ],
+    "moduleNameMapper": {
+      "^mongoose$": "<rootDir>/node_modules/mongoose"
+    },
+    "setupFiles": [
+      "<rootDir>/jest/setEnvVars.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taco-Hut/covid-test-tracker-backend.git"
+  },
+  "author": "Ringo Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taco-Hut/covid-test-tracker-backend/issues"
+  },
+  "homepage": "https://github.com/Taco-Hut/covid-test-tracker-backend#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "@jest/globals": "^26.6.2",
+    "apollo-server-testing": "^2.19.0",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "dependencies": {
+    "apollo-server": "^2.19.0",
+    "apollo-server-express": "^2.19.0",
+    "axios": "^0.21.0",
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.4.0",
+    "graphql-resolvers": "^0.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.4",
+    "uuid": "^8.3.1",
+    "validator": "^13.5.1"
+  }
+}
